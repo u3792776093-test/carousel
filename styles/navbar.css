@@ -1,4 +1,4 @@
-/* Navbar Styles - Luxurious Transparent Look */
+/* Navbar Styles - Reusable */
 * {
     margin: 0;
     padding: 0;
@@ -6,20 +6,18 @@
 }
 
 .navbar {
-    background-color: rgba(31, 58, 95, 0.85); /* More transparent */
-    backdrop-filter: blur(10px); /* Luxurious glass effect */
+    background-color: rgba(31, 58, 95, 0.85); /* More transparent, luxurious feel */
+    backdrop-filter: blur(10px); /* Adds luxury blur effect */
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.3); /* subtle gold line */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
 }
 
 .navbar:hover {
     background-color: rgba(31, 58, 95, 0.95);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .navbar-container {
@@ -34,15 +32,16 @@
 .navbar-logo a {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
-.logo-img {
+.navbar-logo svg {
     height: 50px;
     width: auto;
     transition: transform 0.3s ease;
 }
 
-.logo-img:hover {
+.navbar-logo svg:hover {
     transform: scale(1.05);
 }
 
@@ -53,16 +52,16 @@
 }
 
 .nav-link {
-    color: #FFD700; /* gold color */
+    color: #FFD700;
     text-decoration: none;
-    font-weight: 600;
-    font-family: "Georgia", serif;
+    font-weight: 500;
     transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 .nav-link:hover {
-    color: #FFFACD;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    color: #F6C453;
+    text-shadow: 0 0 8px rgba(246, 196, 83, 0.5);
 }
 
 /* Hamburger Menu */
@@ -100,7 +99,7 @@
     }
 
     .nav-menu {
-        position: fixed;
+        position: absolute;
         top: 70px;
         right: 0;
         left: 0;
@@ -113,7 +112,7 @@
     }
 
     .nav-menu.active {
-        max-height: 100vh;
+        max-height: 500px;
         padding: 1rem 0;
     }
 
@@ -125,23 +124,17 @@
     .nav-item:last-child {
         border-bottom: none;
     }
-}
 
-/* Small Devices */
-@media (max-width: 480px) {
     .navbar-container {
         padding: 0 1rem;
     }
+}
 
-    .logo-img {
+@media (max-width: 480px) {
+    .navbar-logo svg {
         height: 40px;
     }
 
-    .nav-item {
-        padding: 0.75rem 1.5rem;
-    }
-
-    .nav-link {
-        font-size: 0.9rem;
-    }
-}
+    .hamburger span {
+        width: 20px;
+        height: 2

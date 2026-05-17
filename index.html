@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patmos Inn - Seafront Residence</title>
-    <!-- Styles -->
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <!-- Replace with your SVG logo -->
                 <a href="index.html">
-                    <img src="images/logo.svg" alt="Patmos Inn Logo" class="logo-img">
+                    <!-- Full SVG logo inline -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 280" preserveAspectRatio="xMidYMid meet">
+                        <text x="220" y="125" 
+                              font-family="Kunstler Script, Brush Script MT, cursive" 
+                              font-size="72" 
+                              text-anchor="middle" 
+                              fill="#5FA8D3"
+                              stroke="#1F3A5F" 
+                              stroke-width="0.7">
+                            Patmos Inn
+                        </text>
+                        <circle cx="360" cy="100" r="10" fill="#F6C453"/>
+                        <line x1="120" y1="150" x2="340" y2="150" stroke="#5FA8D3" stroke-width="2.5"/>
+                        <line x1="140" y1="158" x2="320" y2="158" stroke="#5FA8D3" stroke-width="2" opacity="0.6"/>
+                        <text x="220" y="195" font-family="Arial, sans-serif" font-size="12" letter-spacing="3" text-anchor="middle" fill="#1F3A5F">
+                            SEAFRONT RESIDENCE
+                        </text>
+                        <text x="220" y="218" font-family="Arial, sans-serif" font-size="10" letter-spacing="2" text-anchor="middle" fill="#7A8FA3">
+                            SKALA PATMOS
+                        </text>
+                    </svg>
                 </a>
             </div>
             <div class="hamburger" id="hamburger">
@@ -42,7 +59,13 @@
     <section class="hero">
         <div class="logo-container">
             <svg width="460" height="280" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 280" preserveAspectRatio="xMidYMid meet">
-                <text x="220" y="125" font-family="Kunstler Script, Brush Script MT, cursive" font-size="72" text-anchor="middle" fill="#5FA8D3" stroke="#1F3A5F" stroke-width="0.7">
+                <text x="220" y="125" 
+                      font-family="Kunstler Script, Brush Script MT, cursive" 
+                      font-size="72" 
+                      text-anchor="middle" 
+                      fill="#5FA8D3"
+                      stroke="#1F3A5F" 
+                      stroke-width="0.7">
                     Patmos Inn
                 </text>
                 <circle cx="360" cy="100" r="10" fill="#F6C453"/>
@@ -58,7 +81,6 @@
         </div>
     </section>
 
-    <!-- Navbar JS -->
     <script src="scripts/navbar.js"></script>
 </body>
 </html>
