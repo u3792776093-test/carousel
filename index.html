@@ -49,21 +49,25 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 500px;
+            max-width: 800px;
             padding: 20px;
         }
 
         .logo-container svg {
             width: 100%;
             height: auto;
-            max-width: 500px;
+            max-width: 800px;
             filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
         }
 
         /* Responsive adjustments for tablets */
         @media (max-width: 768px) {
             .logo-container {
-                max-width: 400px;
+                max-width: 600px;
+            }
+
+            .logo-container svg {
+                max-width: 600px;
             }
         }
 
@@ -74,15 +78,23 @@
             }
 
             .logo-container {
-                max-width: 300px;
+                max-width: 400px;
                 padding: 15px;
+            }
+
+            .logo-container svg {
+                max-width: 400px;
             }
         }
 
         /* Extra small screens */
         @media (max-width: 360px) {
             .logo-container {
-                max-width: 250px;
+                max-width: 300px;
+            }
+
+            .logo-container svg {
+                max-width: 300px;
             }
         }
     </style>
