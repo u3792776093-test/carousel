@@ -1,0 +1,86 @@
+/* Index Page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Dark overlay for better logo visibility */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.logo-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.logo-container svg {
+    width: 80%;
+    height: auto;
+    max-width: 1000px;
+    filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    .logo-container svg {
+        width: 85%;
+        max-width: 700px;
+    }
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 480px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .logo-container {
+        padding: 15px;
+    }
+
+    .logo-container svg {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    .logo-container svg {
+        width: 95%;
+        max-width: 350px;
+    }
+}
