@@ -36,7 +36,7 @@ body {
     padding: 0 1.5rem;
 }
 
-/* SVG LOGO */
+/* SVG LOGO IN NAVBAR */
 .navbar-logo svg {
     height: 50px;
     width: auto;
@@ -77,7 +77,7 @@ body {
 }
 
 /* =========================
-   HERO (FULL SCREEN IMAGE)
+   HERO SECTION
 ========================= */
 .hero {
     height: 100vh;
@@ -89,21 +89,31 @@ body {
     position: relative;
 }
 
+/* dark overlay */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(31, 58, 95, 0.35);
+    z-index: 1;
 }
 
+/* CENTER LOGO */
 .logo-container {
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
+/* 2× BIGGER LOGO */
 .logo-container svg {
-    width: 60%;
-    max-width: 450px;
+    width: 120%;
+    max-width: 900px;
+    height: auto;
 }
 
 /* =========================
@@ -159,7 +169,7 @@ body {
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ========================= */
 @media (max-width: 768px) {
 
@@ -190,8 +200,10 @@ body {
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
+    /* LOGO SIZE ADJUST */
     .logo-container svg {
-        width: 75%;
+        width: 150%;
+        max-width: 600px;
     }
 }
 
@@ -202,7 +214,8 @@ body {
     }
 
     .logo-container svg {
-        width: 85%;
+        width: 180%;
+        max-width: 420px;
     }
 
     .section {
