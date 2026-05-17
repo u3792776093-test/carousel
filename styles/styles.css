@@ -1,6 +1,6 @@
-/* ========================
-   Reset & Base Styles
-======================== */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -14,42 +14,35 @@ body {
     overflow-x: hidden;
 }
 
-/* ========================
-   Navbar
-======================== */
+/* =========================
+   NAVBAR (LUXURY GLASS)
+========================= */
 .navbar {
-    background-color: rgba(31, 58, 95, 0.85); /* More transparent and luxurious */
-    padding: 1rem 0;
+    background-color: rgba(31, 58, 95, 0.82);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    backdrop-filter: blur(6px);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(246, 196, 83, 0.25);
 }
 
 .navbar-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
-.navbar-logo a {
-    display: flex;
-    align-items: center;
-    color: #5FA8D3;
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* SVG LOGO */
+.navbar-logo svg {
+    height: 50px;
+    width: auto;
 }
 
-.navbar-logo a:hover {
-    color: #F6C453;
-}
-
+/* MENU */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -57,19 +50,18 @@ body {
 }
 
 .nav-link {
-    color: #5FA8D3;
     text-decoration: none;
+    color: #5FA8D3;
     font-weight: 500;
-    transition: all 0.3s ease;
     letter-spacing: 0.5px;
+    transition: 0.3s;
 }
 
 .nav-link:hover {
     color: #F6C453;
-    text-shadow: 0 0 8px rgba(246, 196, 83, 0.5);
 }
 
-/* Hamburger Menu */
+/* HAMBURGER */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -79,133 +71,98 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #5FA8D3;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-    border-radius: 2px;
+    background: #5FA8D3;
+    margin: 4px 0;
+    transition: 0.3s;
 }
 
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-}
-
-/* ========================
-   Hero Section
-======================== */
+/* =========================
+   HERO (FULL SCREEN IMAGE)
+========================= */
 .hero {
+    height: 100vh;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    background: url('../images/hero.jpg') no-repeat center center/cover;
+    background: url('../images/hero.jpg') center/cover no-repeat;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
 .hero::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(31, 58, 95, 0.4); /* luxurious overlay */
-    z-index: 1;
+    inset: 0;
+    background: rgba(31, 58, 95, 0.35);
 }
 
 .logo-container {
     position: relative;
     z-index: 2;
-    text-align: center;
 }
 
 .logo-container svg {
     width: 60%;
-    max-width: 460px;
-    height: auto;
+    max-width: 450px;
 }
 
-/* ========================
-   Page Content Sections
-======================== */
+/* =========================
+   PAGE CONTENT
+========================= */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    margin: auto;
+    padding: 2rem 1.5rem;
 }
 
 .section {
-    background-color: white;
-    margin-bottom: 2rem;
+    background: #fff;
     padding: 2rem;
+    margin-bottom: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-.section h1 {
-    color: #1F3A5F;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid #5FA8D3;
-    padding-bottom: 0.5rem;
-}
-
+.section h1,
 .section h2 {
     color: #1F3A5F;
-    font-size: 2rem;
-    margin-bottom: 1rem;
     border-bottom: 2px solid #5FA8D3;
     padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .section p {
-    color: #666;
-    line-height: 1.8;
-    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
 }
 
-/* ========================
-   Footer
-======================== */
+/* =========================
+   FOOTER (MINIMAL LUXURY)
+========================= */
 .footer {
     background-color: rgba(31, 58, 95, 0.95);
-    color: #c9d6e3;
     text-align: center;
     padding: 1.5rem 1rem;
     font-size: 0.9rem;
     border-top: 1px solid rgba(246, 196, 83, 0.25);
+    color: #c9d6e3;
 }
 
 .footer a {
     color: #F6C453;
     text-decoration: none;
     margin: 0 0.3rem;
-    transition: 0.3s;
 }
 
 .footer a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
-/* ========================
-   Responsive Styles
-======================== */
-@media (max-width: 1024px) {
-    .logo-container svg {
-        width: 70%;
-        max-width: 400px;
-    }
-}
-
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
+
     .hamburger {
         display: flex;
     }
@@ -213,113 +170,42 @@ body {
     .nav-menu {
         position: absolute;
         top: 70px;
-        right: 0;
         left: 0;
+        right: 0;
         flex-direction: column;
-        background-color: rgba(31, 58, 95, 0.95);
-        gap: 0;
+        background: rgba(31, 58, 95, 0.95);
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: 0.3s ease;
+        gap: 0;
     }
 
     .nav-menu.active {
-        max-height: 500px;
+        max-height: 400px;
         padding: 1rem 0;
     }
 
     .nav-item {
-        padding: 1rem 2rem;
-        border-bottom: 1px solid rgba(95, 168, 211, 0.2);
-    }
-
-    .nav-item:last-child {
-        border-bottom: none;
-    }
-
-    .navbar-container {
-        padding: 0 1rem;
-    }
-
-    .navbar-logo a {
-        font-size: 1.5rem;
-    }
-
-    .container {
         padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    .section {
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .section h1 {
-        font-size: 2rem;
-    }
-
-    .section h2 {
-        font-size: 1.5rem;
-    }
-
-    .section p {
-        font-size: 0.95rem;
+    .logo-container svg {
+        width: 75%;
     }
 }
 
 @media (max-width: 480px) {
-    .navbar-container {
-        padding: 0 0.75rem;
-    }
 
-    .navbar-logo a {
-        font-size: 1.2rem;
-    }
-
-    .hamburger span {
-        width: 20px;
-        height: 2.5px;
-    }
-
-    .nav-menu {
-        top: 60px;
-    }
-
-    .nav-item {
-        padding: 0.75rem 1.5rem;
-    }
-
-    .nav-link {
-        font-size: 0.9rem;
-    }
-
-    .container {
-        padding: 0.75rem;
-    }
-
-    .section {
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .section h1 {
-        font-size: 1.75rem;
-    }
-
-    .section h2 {
-        font-size: 1.25rem;
-    }
-
-    .section p {
-        font-size: 0.9rem;
-    }
-
-    .footer {
-        padding: 1rem;
+    .navbar-logo svg {
+        height: 40px;
     }
 
     .logo-container svg {
-        width: 80%;
-        max-width: 350px;
+        width: 85%;
+    }
+
+    .section {
+        padding: 1.2rem;
     }
 }
