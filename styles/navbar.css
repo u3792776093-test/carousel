@@ -90,7 +90,7 @@
     }
 
     .nav-menu {
-        position: absolute;
+        position: fixed; /* changed from absolute to fixed */
         top: 70px;
         right: 0;
         left: 0;
@@ -103,7 +103,7 @@
     }
 
     .nav-menu.active {
-        max-height: 500px;
+        max-height: 100vh; /* increased max-height to cover full menu */
         padding: 1rem 0;
     }
 
