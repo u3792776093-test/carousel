@@ -1,5 +1,5 @@
 <svg width="460" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect width="100%" height="100%" fill="transparent"/>
 
   <!-- Main Brand (bigger) -->
   <text x="220" y="125" 
