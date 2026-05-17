@@ -49,25 +49,21 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 800px;
             padding: 20px;
         }
 
         .logo-container svg {
-            width: 100%;
+            width: 80%;
             height: auto;
-            max-width: 800px;
+            max-width: 1000px;
             filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
         }
 
         /* Responsive adjustments for tablets */
         @media (max-width: 768px) {
-            .logo-container {
-                max-width: 600px;
-            }
-
             .logo-container svg {
-                max-width: 600px;
+                width: 85%;
+                max-width: 700px;
             }
         }
 
@@ -78,23 +74,20 @@
             }
 
             .logo-container {
-                max-width: 400px;
                 padding: 15px;
             }
 
             .logo-container svg {
-                max-width: 400px;
+                width: 90%;
+                max-width: 500px;
             }
         }
 
         /* Extra small screens */
         @media (max-width: 360px) {
-            .logo-container {
-                max-width: 300px;
-            }
-
             .logo-container svg {
-                max-width: 300px;
+                width: 95%;
+                max-width: 350px;
             }
         }
     </style>
@@ -102,7 +95,7 @@
 <body>
     <section class="hero">
         <div class="logo-container">
-            <svg width="460" height="280" xmlns="http://www.w3.org/2000/svg">
+            <svg width="460" height="280" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 280" preserveAspectRatio="xMidYMid meet">
                 <!-- Main Brand (bigger) -->
                 <text x="220" y="125" 
                       font-family="Kunstler Script, Brush Script MT, cursive" 
