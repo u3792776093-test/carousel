@@ -1,114 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guest Reviews - Patmos Inn</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guest Reviews - Patmos Inn</title>
 
-    <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/styles.css">
+
+<style>
+/* ================= SECTION STYLING ================= */
+.section {
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 90px auto 80px; /* space from navbar + bottom */
+    text-align: left;
+}
+
+.section h1 {
+    font-size: 3rem;
+    color: #0B1F3A;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.review {
+    background: #fdf9f4;
+    border-left: 6px solid #F6C453;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.review p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2C3E50;
+    margin: 0 0 10px 0;
+}
+
+.review h3 {
+    font-size: 1rem;
+    color: #1F3A5F;
+    font-weight: 500;
+    margin: 0;
+    text-align: right;
+}
+
+.review::before {
+    content: "“";
+    font-size: 3rem;
+    color: #F6C453;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-family: serif;
+}
+
+.review::after {
+    content: "”";
+    font-size: 3rem;
+    color: #F6C453;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: serif;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .review {
+        padding: 15px 20px;
+    }
+    .review::before,
+    .review::after {
+        font-size: 2.5rem;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-container">
-
-            <div class="navbar-logo">
-                <a href="index.html">Patmos Inn</a>
-            </div>
-
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
-                <li class="nav-item"><a href="overview.html" class="nav-link">OVERVIEW</a></li>
-                <li class="nav-item"><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
-                <li class="nav-item"><a href="amenities.html" class="nav-link">AMENITIES</a></li>
-                <li class="nav-item"><a href="location.html" class="nav-link">LOCATION</a></li>
-                <li class="nav-item"><a href="reviews.html" class="nav-link">REVIEWS</a></li>
-                <li class="nav-item"><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-            </ul>
-
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="container">
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html" class="nav-link">HOME</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="overview.html" class="nav-link">OVERVIEW</a></li>
+            <li><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
+            <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+            <li><a href="location.html" class="nav-link">LOCATION</a></li>
+            <li><a href="reviews.html" class="nav-link">REVIEWS</a></li>
+            <li><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+    </div>
+</nav>
 
-        <section class="section">
+<!-- ================= CONTENT ================= -->
+<main class="container">
+<section class="section">
 
-            <h1>Guest Reviews</h1>
+<h1>Guest Reviews</h1>
 
-            <div class="review">
-                <p>
-                    “We spent every evening on the terrace watching the monastery lights over the harbor.
-                    The location feels almost unreal.”
-                </p>
-                <h3>— Isabelle, Paris</h3>
-            </div>
+<div class="review">
+    <p>We spent every evening on the terrace watching the monastery lights over the harbor. The location feels almost unreal.</p>
+    <h3>— Isabelle, Paris</h3>
+</div>
 
-            <div class="review">
-                <p>
-                    “One of the few places where the reality is even better than the photographs.”
-                </p>
-                <h3>— Daniel, London</h3>
-            </div>
+<div class="review">
+    <p>One of the few places where the reality is even better than the photographs.</p>
+    <h3>— Daniel, London</h3>
+</div>
 
-            <div class="review">
-                <p>
-                    “Patmos Inn feels more like a private waterfront residence than a holiday rental.”
-                </p>
-                <h3>— Sofia, Milan</h3>
-            </div>
+<div class="review">
+    <p>Patmos Inn feels more like a private waterfront residence than a holiday rental.</p>
+    <h3>— Sofia, Milan</h3>
+</div>
 
-            <div class="review">
-                <p>
-                    “The combination of direct sea access and walking distance to everything is incredibly rare.”
-                </p>
-                <h3>— Thomas, Zurich</h3>
-            </div>
+<div class="review">
+    <p>The combination of direct sea access and walking distance to everything is incredibly rare.</p>
+    <h3>— Thomas, Zurich</h3>
+</div>
 
-            <div class="review">
-                <p>
-                    “Quiet, elegant, and deeply relaxing.”
-                </p>
-                <h3>— Charlotte, Brussels</h3>
-            </div>
+<div class="review">
+    <p>Quiet, elegant, and deeply relaxing.</p>
+    <h3>— Charlotte, Brussels</h3>
+</div>
 
-            <div class="review">
-                <p>
-                    “After years of traveling across the Greek islands,
-                    this is one of the rare places we would return to immediately.”
-                </p>
-                <h3>— Alexander, Monaco</h3>
-            </div>
+<div class="review">
+    <p>After years of traveling across the Greek islands, this is one of the rare places we would return to immediately.</p>
+    <h3>— Alexander, Monaco</h3>
+</div>
 
-            <div class="review">
-                <p>
-                    “The terrace completely defines the experience.”
-                </p>
-                <h3>— Emilia, Rome</h3>
-            </div>
+<div class="review">
+    <p>The terrace completely defines the experience.</p>
+    <h3>— Emilia, Rome</h3>
+</div>
 
-        </section>
+</section>
+</main>
 
-    </main>
-
-    <!-- Footer -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <p>
         <a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos, Greece · info@patmosinn.com · +30 XXX XXX XXX
     </p>
 </footer>
 
-    <script src="scripts/navbar.js"></script>
+<script src="scripts/navbar.js"></script>
 
 </body>
 </html>

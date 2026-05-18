@@ -5,39 +5,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Accommodation - Patmos Inn</title>
 
-<link rel="stylesheet" href="styles/navbar.css">
-<link rel="stylesheet" href="styles/home.css">
+<link rel="stylesheet" href="styles/styles.css">
+
+<style>
+
+/* ================= FIX NAVBAR SPACING ================= */
+body {
+    padding-top: 80px; /* space for fixed navbar */
+}
+
+/* ================= SECTION ================= */
+.section {
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+/* ================= TYPOGRAPHY ================= */
+.section h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #0B1F3A;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #1F3A5F;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #F6C453;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+</style>
 </head>
+
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-<div class="navbar-container">
+    <div class="navbar-container">
 
-<div class="navbar-logo">
-<a href="index.html">Patmos Inn</a>
-</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html" class="nav-link">HOME</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="overview.html" class="nav-link">OVERVIEW</a></li>
+            <li><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
+            <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+            <li><a href="location.html" class="nav-link">LOCATION</a></li>
+            <li><a href="reviews.html" class="nav-link">REVIEWS</a></li>
+            <li><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
 
-<ul class="nav-menu" id="navMenu">
-<li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
-<li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
-<li class="nav-item"><a href="overview.html" class="nav-link">OVERVIEW</a></li>
-<li class="nav-item"><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
-<li class="nav-item"><a href="amenities.html" class="nav-link">AMENITIES</a></li>
-<li class="nav-item"><a href="location.html" class="nav-link">LOCATION</a></li>
-<li class="nav-item"><a href="reviews.html" class="nav-link">REVIEWS</a></li>
-<li class="nav-item"><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
-<li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-</ul>
-
-</div>
+    </div>
 </nav>
 
+<!-- ================= CONTENT ================= -->
 <main class="container">
 
 <section class="section">
@@ -65,6 +102,7 @@ calming textures, and refined simplicity.
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <p>
         <a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos, Greece · info@patmosinn.com · +30 XXX XXX XXX

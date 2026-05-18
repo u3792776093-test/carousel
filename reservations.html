@@ -6,39 +6,119 @@
 
 <title>Reservations - Patmos Inn</title>
 
-    <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/styles.css">
+
+<style>
+
+/* ================= SECTION LAYOUT ================= */
+.section {
+    padding: 0 20px;
+    margin: 90px auto 80px;
+    text-align: left;
+}
+
+/* subtle luxury left shift */
+@media (min-width: 900px) {
+    .section {
+        margin-left: 8%;
+        margin-right: auto;
+    }
+}
+
+/* ================= TYPOGRAPHY ================= */
+.section h1 {
+    font-size: 3rem;
+    color: #0B1F3A;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #1F3A5F;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #F6C453;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #2C3E50;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* ================= CTA BUTTONS ================= */
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background: #1F3A5F;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    background: #0B1F3A;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #F6C453;
+    color: #1F3A5F;
+}
+
+.btn-secondary:hover {
+    background: #F6C453;
+    color: #0B1F3A;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-<div class="navbar-container">
+    <div class="navbar-container">
 
-<div class="navbar-logo">
-<a href="index.html">Patmos Inn</a>
-</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html" class="nav-link">HOME</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="overview.html" class="nav-link">OVERVIEW</a></li>
+            <li><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
+            <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+            <li><a href="location.html" class="nav-link">LOCATION</a></li>
+            <li><a href="reviews.html" class="nav-link">REVIEWS</a></li>
+            <li><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
 
-<ul class="nav-menu" id="navMenu">
-<li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
-<li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
-<li class="nav-item"><a href="overview.html" class="nav-link">OVERVIEW</a></li>
-<li class="nav-item"><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
-<li class="nav-item"><a href="amenities.html" class="nav-link">AMENITIES</a></li>
-<li class="nav-item"><a href="location.html" class="nav-link">LOCATION</a></li>
-<li class="nav-item"><a href="reviews.html" class="nav-link">REVIEWS</a></li>
-<li class="nav-item"><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
-<li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-</ul>
-
-</div>
+    </div>
 </nav>
 
+<!-- ================= CONTENT ================= -->
 <main class="container">
 
 <section class="section">
@@ -59,9 +139,9 @@ Direct reservations and Airbnb bookings are available.
 <h2>Reservation Options</h2>
 
 <div class="cta-buttons">
-<a href="#" class="btn">Check Availability</a>
-<a href="#" class="btn">Request Reservation</a>
-<a href="#" class="btn btn-secondary">Book via Airbnb</a>
+    <a href="#" class="btn">Check Availability</a>
+    <a href="#" class="btn">Request Reservation</a>
+    <a href="#" class="btn btn-secondary">Book via Airbnb</a>
 </div>
 
 <p>
@@ -73,6 +153,7 @@ inquiries are personally handled within 24 hours.
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <p>
         <a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos, Greece · info@patmosinn.com · +30 XXX XXX XXX

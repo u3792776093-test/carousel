@@ -1,123 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location - Patmos Inn</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location - Patmos Inn</title>
 
-    <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/styles.css">
+
+<style>
+/* ================= SECTION STYLING ================= */
+.section {
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 90px auto 80px; /* space from navbar + bottom */
+    text-align: left;
+}
+
+/* subtle left shift on desktop */
+@media (min-width: 900px) {
+    .section {
+        margin-left: 8%;
+        margin-right: auto;
+    }
+}
+
+.section h1 {
+    font-size: 3rem;
+    color: #0B1F3A;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #1F3A5F;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #F6C453;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.section ul.feature-list {
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.section ul.feature-list li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2C3E50;
+}
+
+/* ================= GOOGLE MAP ================= */
+.map-container {
+    margin-top: 40px;
+    width: 100%;
+    height: 450px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-container">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="navbar-container">
 
-            <div class="navbar-logo">
-                <a href="index.html">Patmos Inn</a>
-            </div>
-
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
-                <li class="nav-item"><a href="overview.html" class="nav-link">OVERVIEW</a></li>
-                <li class="nav-item"><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
-                <li class="nav-item"><a href="amenities.html" class="nav-link">AMENITIES</a></li>
-                <li class="nav-item"><a href="location.html" class="nav-link">LOCATION</a></li>
-                <li class="nav-item"><a href="reviews.html" class="nav-link">REVIEWS</a></li>
-                <li class="nav-item"><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-            </ul>
-
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="container">
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html" class="nav-link">HOME</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="overview.html" class="nav-link">OVERVIEW</a></li>
+            <li><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
+            <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+            <li><a href="location.html" class="nav-link">LOCATION</a></li>
+            <li><a href="reviews.html" class="nav-link">REVIEWS</a></li>
+            <li><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
 
-        <section class="section">
+    </div>
+</nav>
 
-            <h1>Location</h1>
+<!-- ================= CONTENT ================= -->
+<main class="container">
 
-            <h2>Walk Everywhere from the Waterfront</h2>
+<section class="section">
 
-            <p>
-                Patmos Inn is located directly on Saint Theologos Beach
-                steps from the 95 year A.D. Baptistery of Saint John the Theologian
-                and the Marina, in the heart of Skala Patmos.
-            </p>
+<h1>Location</h1>
 
-            <p>
-                One of the few remaining true waterfront residences in central Skala,
-                the property combines direct sea access, privacy,
-                and immediate proximity to the island’s restaurants,
-                boutiques, cafés, and port.
-            </p>
+<h2>Walk Everywhere from the Waterfront</h2>
 
-            <p>
-                Guests experience life directly on the Aegean while remaining fully connected
-                to the rhythm of the island.
-            </p>
+<p>
+Patmos Inn is located directly on Saint Theologos Beach,
+steps from the 95 year A.D. Baptistery of Saint John the Theologian
+and the Marina, in the heart of Skala Patmos.
+</p>
 
-            <hr>
+<p>
+One of the few remaining true waterfront residences in central Skala,
+the property combines direct sea access, privacy,
+and immediate proximity to the island’s restaurants,
+boutiques, cafés, and port.
+</p>
 
-            <h2>Distances</h2>
+<p>
+Guests experience life directly on the Aegean while remaining fully connected
+to the rhythm of the island.
+</p>
 
-            <ul class="feature-list">
-                <li><strong>Skala Center</strong><br>250 m. (2-minute walk)</li>
+<hr>
 
-                <li><strong>Skala Port</strong><br>300 m. (3-minute walk)</li>
+<h2>Distances</h2>
 
-                <li><strong>Saint Theologos Beach</strong><br>Directly in front of the residence</li>
+<ul class="feature-list">
+    <li><strong>Skala Center</strong><br>250 m. (2-minute walk)</li>
+    <li><strong>Skala Port</strong><br>300 m. (3-minute walk)</li>
+    <li><strong>Saint Theologos Beach</strong><br>Directly in front of the residence</li>
+    <li><strong>Closest Airports</strong><br>
+        Leros Airport — approximately 45 minutes by boat<br>
+        Samos Airport — approximately 1 hour by boat
+    </li>
+</ul>
 
-                <li><strong>Closest Airports</strong><br>
-                    Leros Airport — approximately 45 minutes by boat<br>
-                    Samos Airport — approximately 1 hour by boat
-                </li>
-            </ul>
+<hr>
 
-            <hr>
+<h2>Discover Patmos</h2>
 
-            <h2>Discover Patmos</h2>
+<p>
+Patmos is one of Greece’s most refined and discreet island destinations,
+known for its spiritual heritage, protected architecture,
+sophisticated atmosphere, and understated luxury.
+</p>
 
-            <p>
-                Patmos is one of Greece’s most refined and discreet island destinations,
-                known for its spiritual heritage, protected architecture,
-                sophisticated atmosphere, and understated luxury.
-            </p>
+<p>
+Home to the UNESCO-listed Monastery of Saint John the Theologian
+and the Cave of the Apocalypse,
+the island attracts travelers seeking authenticity,
+culture, privacy, and a slower Mediterranean rhythm away from mass tourism.
+</p>
 
-            <p>
-                Home to the UNESCO-listed Monastery of Saint John the Theologian
-                and the Cave of the Apocalypse,
-                the island attracts travelers seeking authenticity,
-                culture, privacy, and a slower Mediterranean rhythm away from mass tourism.
-            </p>
+<p>
+Its combination of elegant simplicity, yacht culture,
+and preserved architectural identity has established Patmos
+as one of the Mediterranean’s most quietly exclusive destinations.
+</p>
 
-            <p>
-                Its combination of elegant simplicity, yacht culture,
-                and preserved architectural identity has established Patmos
-                as one of the Mediterranean’s most quietly exclusive destinations.
-            </p>
+<!-- ================= GOOGLE MAP ================= -->
+<div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.661632954667!2d26.54202611548878!3d36.5467990799488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149ef0fa4cb4826d%3A0x29d57bb2f47b0716!2sPatmos%20Inn!5e0!3m2!1sen!2sus!4v1689800000000!5m2!1sen!2sus" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
 
-        </section>
+</section>
 
-    </main>
+</main>
 
-    <!-- Footer -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <p>
         <a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos, Greece · info@patmosinn.com · +30 XXX XXX XXX
     </p>
 </footer>
 
-    <script src="scripts/navbar.js"></script>
+<script src="scripts/navbar.js"></script>
 
 </body>
 </html>

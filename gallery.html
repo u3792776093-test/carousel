@@ -3,166 +3,216 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Gallery - Patmos Inn</title>
 
-    <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/styles.css">
 
 <style>
 
-.slideshow-container {
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 12px;
+/* ================= CAROUSEL ================= */
+.wrapper {
+    margin-top: 90px;
 }
 
+.carousel {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* slides */
 .slide {
     display: none;
-}
-
-.slide img {
     width: 100%;
     height: 600px;
     object-fit: cover;
 }
 
-.prev,
-.next {
-    cursor: pointer;
+.slide.active {
+    display: block;
+}
+
+/* buttons */
+.prev, .next {
     position: absolute;
     top: 50%;
-    padding: 16px;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    user-select: none;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.4);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(31,58,95,0.8);
+    color: #F6C453;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
 }
 
-.prev {
-    left: 0;
+.prev:hover, .next:hover {
+    background: #F6C453;
+    color: #1F3A5F;
 }
 
-.next {
-    right: 0;
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* ================= THUMBS ================= */
+.thumbs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px auto 40px;
+    max-width: 1200px;
+    overflow-x: auto;
+    padding: 10px;
 }
 
-.fade {
-    animation: fade 1s;
+.thumbs img {
+    width: 100px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0.6;
+    cursor: pointer;
 }
 
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+.thumbs img.active {
+    opacity: 1;
+    border: 2px solid #F6C453;
 }
+
 
 </style>
 </head>
+
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-<div class="navbar-container">
+    <div class="navbar-container">
 
-<div class="navbar-logo">
-<a href="index.html">Patmos Inn</a>
-</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html" class="nav-link">HOME</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="overview.html" class="nav-link">OVERVIEW</a></li>
+            <li><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
+            <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+            <li><a href="location.html" class="nav-link">LOCATION</a></li>
+            <li><a href="reviews.html" class="nav-link">REVIEWS</a></li>
+            <li><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
 
-<ul class="nav-menu" id="navMenu">
-<li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
-<li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
-<li class="nav-item"><a href="overview.html" class="nav-link">OVERVIEW</a></li>
-<li class="nav-item"><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
-<li class="nav-item"><a href="amenities.html" class="nav-link">AMENITIES</a></li>
-<li class="nav-item"><a href="location.html" class="nav-link">LOCATION</a></li>
-<li class="nav-item"><a href="reviews.html" class="nav-link">REVIEWS</a></li>
-<li class="nav-item"><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
-<li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-</ul>
-
-</div>
+    </div>
 </nav>
 
-<main class="container">
 
-<section class="section">
+<!-- CAROUSEL -->
+<div class="wrapper">
 
-<h1>Gallery</h1>
+<div class="carousel">
 
-<div class="slideshow-container">
+<img class="slide active" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1600">
 
-<div class="slide fade">
-<img src="images/gallery1.jpg" alt="Patmos Inn">
+<img class="slide" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1600">
+
+<img class="slide" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1600">
+
+<div class="prev" onclick="move(-1)">❮</div>
+<div class="next" onclick="move(1)">❯</div>
+
 </div>
 
-<div class="slide fade">
-<img src="images/gallery2.jpg" alt="Patmos Inn">
+<!-- THUMBS -->
+<div class="thumbs">
+<img class="active" onclick="go(0)" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300">
+<img onclick="go(1)" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=300">
+<img onclick="go(2)" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=300">
+<img onclick="go(3)" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=300">
+<img onclick="go(4)" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=300">
+<img onclick="go(5)" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=300">
+
+<img onclick="go(6)" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=300">
+<img onclick="go(7)" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=300">
+<img onclick="go(8)" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=300">
+<img onclick="go(9)" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=300">
+<img onclick="go(10)" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=300">
+
+<img onclick="go(11)" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=300">
+<img onclick="go(12)" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=300">
+<img onclick="go(13)" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=300">
+<img onclick="go(14)" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=300">
+<img onclick="go(15)" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=300">
 </div>
 
-<div class="slide fade">
-<img src="images/gallery3.jpg" alt="Patmos Inn">
 </div>
 
-<div class="slide fade">
-<img src="images/gallery4.jpg" alt="Patmos Inn">
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-</section>
-
-</main>
-
+<!-- FOOTER -->
 <footer class="footer">
-    <p>
-        <a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos, Greece · info@patmosinn.com · +30 XXX XXX XXX
-    </p>
+    <a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos · info@patmosinn.com
 </footer>
-
-<script src="scripts/navbar.js"></script>
 
 <script>
 
-let slideIndex = 1;
-showSlides(slideIndex);
+/* ================= HAMBURGER ================= */
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+
+/* ================= CAROUSEL ================= */
+let i = 0;
+const slides = document.querySelectorAll(".slide");
+const thumbs = document.querySelectorAll(".thumbs img");
+
+function show(n) {
+    slides.forEach(s => s.classList.remove("active"));
+    thumbs.forEach(t => t.classList.remove("active"));
+
+    slides[n].classList.add("active");
+    thumbs[n].classList.add("active");
+
+    i = n;
 }
 
-function showSlides(n) {
-
-    let slides = document.getElementsByClassName("slide");
-
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].style.display = "block";
+function move(step) {
+    i += step;
+    if (i >= slides.length) i = 0;
+    if (i < 0) i = slides.length - 1;
+    show(i);
 }
+
+function go(n) {
+    show(n);
+}
+
+/* ================= AUTOPLAY ================= */
+setInterval(() => {
+    move(1);
+}, 4000);
 
 </script>
-
-
+<script src="scripts/navbar.js"></script>
 
 </body>
 </html>

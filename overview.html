@@ -5,41 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Overview - Patmos Inn</title>
 
-    <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/styles.css">
+
+<style>
+
+/* ================= PAGE WRAPPER ================= */
+.page-wrapper {
+    margin-top: 90px;
+    padding: 40px 20px;
+}
+
+/* ================= SECTION ROW ================= */
+.section-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+/* IMAGE LEFT */
+.row-image-left {
+    flex-direction: row;
+}
+
+/* IMAGE RIGHT */
+.row-image-right {
+    flex-direction: row-reverse;
+}
+
+/* ================= TEXT BLOCK ================= */
+.text-block {
+    flex: 1;
+}
+
+.text-block h2 {
+    font-size: 26px;
+    color: #1F3A5F;
+    margin-bottom: 15px;
+}
+
+.text-block p, 
+.text-block li {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #1F3A5F;
+}
+
+.text-block ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* ================= IMAGE BLOCK ================= */
+.image-block {
+    flex: 1;
+}
+
+.image-block img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+    .section-row {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .image-block img {
+        height: 280px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-<div class="navbar-container">
-<div class="navbar-logo">
-<a href="index.html">Patmos Inn</a>
-</div>
+    <div class="navbar-container">
 
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-<ul class="nav-menu" id="navMenu">
-<li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
-<li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
-<li class="nav-item"><a href="overview.html" class="nav-link">OVERVIEW</a></li>
-<li class="nav-item"><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
-<li class="nav-item"><a href="amenities.html" class="nav-link">AMENITIES</a></li>
-<li class="nav-item"><a href="location.html" class="nav-link">LOCATION</a></li>
-<li class="nav-item"><a href="reviews.html" class="nav-link">REVIEWS</a></li>
-<li class="nav-item"><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
-<li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-</ul>
-</div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html" class="nav-link">HOME</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="overview.html" class="nav-link">OVERVIEW</a></li>
+            <li><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
+            <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+            <li><a href="location.html" class="nav-link">LOCATION</a></li>
+            <li><a href="reviews.html" class="nav-link">REVIEWS</a></li>
+            <li><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+
+    </div>
 </nav>
 
-<main class="container">
+<div class="page-wrapper">
 
-<section class="section">
-<h1>Overview</h1>
+<!-- ================= ROW 1 (IMAGE LEFT) ================= -->
+<div class="section-row row-image-left">
 
+<div class="image-block">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Sea View">
+</div>
+
+<div class="text-block">
 <h2>Waterfront Living in One of Patmos’ Most Privileged Locations</h2>
 
 <p>
@@ -48,18 +131,15 @@ architectural authenticity, and direct connection to the sea.
 </p>
 
 <p>
-Hosting up to six guests, the residence combines restored heritage details, handcrafted materials,
-and clean contemporary interiors naturally illuminated by uninterrupted Aegean light throughout the day.
+Hosting up to six guests, the residence combines restored heritage details and handcrafted materials with
+clean contemporary interiors filled with Aegean light.
 </p>
 
 <p>
-Located directly above Saint Theologos Beach beside the marina, the property occupies one of the island’s
-rare true waterfront positions — a setting impossible to recreate today since the Skala’s coast line is totally built up.
+Located directly above Saint Theologos Beach beside the marina, it is one of the island’s rare true waterfront homes.
 </p>
 
-<p>Within a 2-minute walk, guests can reach:</p>
-
-<ul class="feature-list">
+<ul>
 <li>Skala Port</li>
 <li>Fine dining restaurants</li>
 <li>Waterfront cafés</li>
@@ -68,14 +148,76 @@ rare true waterfront positions — a setting impossible to recreate today since 
 </ul>
 
 <p>A car is not necessary during your stay.</p>
-</section>
+</div>
 
-</main>
+</div>
 
+<!-- ================= ROW 2 (IMAGE RIGHT FIXED) ================= -->
+<div class="section-row row-image-right">
+
+<div class="image-block">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80" alt="Heritage Architecture">
+</div>
+
+<div class="text-block">
+<h2>Heritage Architecture Restored for Contemporary Island Living</h2>
+
+<p>
+Originally built in 1920, Patmos Inn once guided ships safely into Skala Harbor.
+</p>
+
+<p>
+Its distinctive double-framed tiled roof was designed for rainwater collection and island climate protection.
+</p>
+
+<p>
+Today it has been carefully restored preserving stone walls, wooden openings, and traditional proportions.
+</p>
+
+<p>
+Natural textures, soft materials, and sea-oriented interiors create an atmosphere that feels timeless, private, and deeply connected to Patmos.
+</p>
+</div>
+
+</div>
+
+<!-- ================= ROW 3 (IMAGE LEFT) ================= -->
+<div class="section-row row-image-left">
+
+<div class="image-block">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80" alt="Heritage Architecture">
+</div>
+
+<div class="text-block">
+<h2>The Experience</h2>
+
+<p>
+Life unfolds directly beside the water — from sunrise swims to evenings overlooking the illuminated monastery.
+</p>
+
+<ul>
+<li>Panoramic sea views</li>
+<li>Private waterfront terrace access</li>
+<li>High-speed Wi-Fi workspace</li>
+<li>Handcrafted interiors</li>
+<li>Direct walk to Skala town</li>
+<li>Indoor dining area and fully equipped kitchen</li>
+</ul>
+
+<p>
+Ideal for couples, families, remote workers, and slow Mediterranean living.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
 <footer class="footer">
-    <p>
-        <a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos, Greece · info@patmosinn.com · +30 XXX XXX XXX
-    </p>
+<p>
+<a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos · info@patmosinn.com
+</p>
 </footer>
 
 <script src="scripts/navbar.js"></script>

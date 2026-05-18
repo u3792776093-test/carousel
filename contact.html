@@ -1,92 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Patmos Inn</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/home.css">
+<title>Contact - Patmos Inn</title>
+
+<link rel="stylesheet" href="styles/styles.css">
+
+<style>
+
+/* ================= SECTION LAYOUT ================= */
+.section {
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 90px auto 80px;
+    text-align: left;
+}
+
+/* subtle luxury left shift */
+@media (min-width: 900px) {
+    .section {
+        margin-left: 8%;
+        margin-right: auto;
+    }
+}
+
+/* ================= TYPOGRAPHY ================= */
+.section h1 {
+    font-size: 3rem;
+    color: #0B1F3A;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #1F3A5F;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #F6C453;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #2C3E50;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* ================= FEATURE LIST ================= */
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* ================= CONTACT FORM ================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #F6C453;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 12px 22px;
+    font-size: 1rem;
+    background: #1F3A5F;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #0B1F3A;
+    transform: translateY(-2px);
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-container">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="navbar-container">
 
-            <div class="navbar-logo">
-                <a href="index.html">Patmos Inn</a>
-            </div>
-
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="home.html" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
-                <li class="nav-item"><a href="overview.html" class="nav-link">OVERVIEW</a></li>
-                <li class="nav-item"><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
-                <li class="nav-item"><a href="amenities.html" class="nav-link">AMENITIES</a></li>
-                <li class="nav-item"><a href="location.html" class="nav-link">LOCATION</a></li>
-                <li class="nav-item"><a href="reviews.html" class="nav-link">REVIEWS</a></li>
-                <li class="nav-item"><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-            </ul>
-
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="container">
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html" class="nav-link">HOME</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="overview.html" class="nav-link">OVERVIEW</a></li>
+            <li><a href="accommodation.html" class="nav-link">ACCOMMODATION</a></li>
+            <li><a href="amenities.html" class="nav-link">AMENITIES</a></li>
+            <li><a href="location.html" class="nav-link">LOCATION</a></li>
+            <li><a href="reviews.html" class="nav-link">REVIEWS</a></li>
+            <li><a href="reservations.html" class="nav-link">RESERVATIONS</a></li>
+            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
 
-        <section class="section">
+    </div>
+</nav>
 
-            <h1>Contact</h1>
+<!-- ================= CONTENT ================= -->
+<main class="container">
 
-            <h2>Private Inquiries & Concierge Assistance</h2>
+<section class="section">
 
-            <p>
-                For reservations, tailored stays, yacht arrivals,
-                or private requests, inquiries are personally handled within 24 hours.
-            </p>
+<h1>Contact</h1>
 
-            <hr>
+<h2>Private Inquiries & Concierge Assistance</h2>
 
-            <h2>Email</h2>
-            <p>info@patmosinn.com</p>
+<p>
+For reservations, tailored stays, yacht arrivals,
+or private requests, inquiries are personally handled within 24 hours.
+</p>
 
-            <h2>WhatsApp</h2>
-            <p>+30 XXX XXX XXX</p>
+<hr>
 
-            <h2>Location</h2>
-            <p>Skala, Patmos, Greece</p>
+<h2>Email</h2>
+<p>info@patmosinn.com</p>
 
-            <hr>
+<h2>WhatsApp</h2>
+<p>+30 XXX XXX XXX</p>
 
-            <h2>Follow Patmos Inn</h2>
+<h2>Location</h2>
+<p>Skala, Patmos, Greece</p>
 
-            <ul class="feature-list">
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>Airbnb</li>
-            </ul>
+<hr>
 
-        </section>
+<h2>Send Us a Message</h2>
+<form class="contact-form" action="#" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="subject" placeholder="Subject">
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
 
-    </main>
+<hr>
 
-    <!-- Footer -->
+<h2>Follow Patmos Inn</h2>
+<ul class="feature-list">
+    <li>Instagram</li>
+    <li>Facebook</li>
+    <li>Airbnb</li>
+</ul>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <p>
         <a href="index.html">Patmos Inn</a> © 2026 · Skala Patmos, Greece · info@patmosinn.com · +30 XXX XXX XXX
     </p>
 </footer>
 
-    <script src="scripts/navbar.js"></script>
+<script src="scripts/navbar.js"></script>
 
 </body>
 </html>
